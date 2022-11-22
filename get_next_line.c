@@ -6,7 +6,7 @@
 /*   By: mqaos <mqaos@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 19:53:00 by mqaos             #+#    #+#             */
-/*   Updated: 2022/11/21 19:48:03 by mqaos            ###   ########.fr       */
+/*   Updated: 2022/11/22 18:10:59 by mqaos            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*get_next_line(int fd)
 {
-	static char	buffmax[2147483647];
+	static char	buffmax[INT_MAX];
 	char		*buff;
 
 	buff = NULL;

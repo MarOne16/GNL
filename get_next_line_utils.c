@@ -6,7 +6,7 @@
 /*   By: mqaos <mqaos@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 23:47:14 by mqaos             #+#    #+#             */
-/*   Updated: 2022/11/21 19:39:44 by mqaos            ###   ########.fr       */
+/*   Updated: 2022/11/22 17:58:31 by mqaos            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,21 +53,21 @@ char	*ft_join(char *s1, char *s2)
 
 int	removeline(char *str)
 {
-	int	i;
-	int	u;
+	int	start;
+	int	sar;
 	int	x;
 
-	i = 0;
-	u = 0;
+	start = 0;
+	sar = 0;
 	x = 0;
-	while (str[i])
+	while (str[start])
 	{
 		if (x)
-			str[u++] = str[i];
-		if (str[i] == '\n')
+			str[sar++] = str[start];
+		if (str[start] == '\n')
 			x = 1;
-		str[i] = '\0';
-		i++;
+		str[start] = '\0';
+		start++;
 	}
 	return (x);
 }

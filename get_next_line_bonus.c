@@ -6,7 +6,7 @@
 /*   By: mqaos <mqaos@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 19:58:25 by mqaos             #+#    #+#             */
-/*   Updated: 2022/11/21 20:16:09 by mqaos            ###   ########.fr       */
+/*   Updated: 2022/11/22 18:11:33 by mqaos            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,7 @@ char	*get_next_line(int fd)
 		if (removeline(buffmax[fd]))
 			break ;
 		if (read(fd, buffmax[fd], 0) < 0)
-		{
-			free(buff);
-			return (0);
-		}
+			return (free(buff), NULL);
 	}
 	return (buff);
 }
